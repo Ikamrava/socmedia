@@ -51,7 +51,7 @@ useEffect(()=>{
   setData(stories)
   
   setuser(currentUser)
-},[])
+},[currentUser])
 
 
 

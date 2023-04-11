@@ -34,6 +34,7 @@ import { BsSun } from 'react-icons/bs';
 function Navbar() {
     const { systemTheme, theme, setTheme } = useTheme();
     const [themicon,setthemIcon] = useState("")
+    const[user,setuser] = useState("ikamrava")
 
     const {currentUser} = useContext(AuthContext)
     const [show,setShow] = useState(false)
@@ -56,21 +57,19 @@ function Navbar() {
         
     }
 
-    const[user,setuser] = useState(null)
-    useEffect(()=>{
-         setuser(currentUser)
-         
-      },[])
+    
 
-      useEffect(()=>{
-        if(theme == "light"){
+
+
+    //   useEffect(()=>{
+    //     if(theme == "light"){
             
-            setthemIcon(<BsMoonStars className=' cursor-pointer dark:text-white bg-black text-white rounded-full p-1 ' size={25} onClick={toggle}/>)
-        }else{
+    //         setthemIcon(<BsMoonStars className=' cursor-pointer dark:text-white bg-black text-white rounded-full p-1 ' size={25} onClick={toggle}/>)
+    //     }else{
            
-            setthemIcon(<BsSun className=' cursor-pointer  bg-yellow-400 rounded-full p-1 text-black ' size={25} onClick={toggle}/>)
-        }
-      },[themicon])
+    //         setthemIcon(<BsSun className=' cursor-pointer  bg-yellow-400 rounded-full p-1 text-black ' size={25} onClick={toggle}/>)
+    //     }
+    //   },[])
 
 
 
@@ -82,9 +81,9 @@ function Navbar() {
             </div>
 
             <AiOutlineHome className=' dark:text-white' size={25}/>
-            {/* {theme === "light"? <BsMoonStars className=' cursor-pointer dark:text-white ' size={25} onClick={toggle}/> :
-            <BsSun className=' cursor-pointer dark:text-white ' size={25} onClick={toggle}/>
-            } */}
+            <BsMoonStars className=' cursor-pointer dark:text-white ' size={25} onClick={toggle}/> 
+            
+        
             {themicon}
             
             <AiOutlineAppstore className=' cursor-pointer dark:text-white ' size={25}/>

@@ -55,7 +55,7 @@ function MainProfile() {
   const[user,setuser] = useState(null)
   useEffect(()=>{
     setuser(currentUser)
-  },[currentUser])
+  },[])
   return (
     <div className='flex-[50%]  flex flex-col md:mx-5 px-5 md:my-5 mx-3 py-5 gap-5   '>
         <div className='relative'>

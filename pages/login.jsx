@@ -12,10 +12,11 @@ function login() {
 
   const router = useRouter();
   async function  loginHandler(){
-    await login(username,password)
-    if(currentUser != null){
-      router.push("/")
-    }
+    // await login(username,password)
+    // if(currentUser != null){
+      
+    // }
+    router.push("/")
     
   }
 
